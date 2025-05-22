@@ -118,3 +118,92 @@ document.addEventListener('DOMContentLoaded', function() {
     
     headingObserver.observe(document.querySelector('.team-heading'));
   });
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        mobileToggle.addEventListener('click', function() {
+            mobileToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+// Add this script to all your HTML pages (before closing </body> tag)
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current page URL
+    const currentPage = window.location.pathname;
+    
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to the current page link
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        
+        // Handle different URL patterns
+        if (currentPage.includes('index.html') || currentPage === '/' || currentPage.endsWith('/')) {
+            if (linkPath === './index.html' || linkPath === '/' || link.textContent.trim() === 'Home') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('about.html')) {
+            if (linkPath === './about.html' || link.textContent.trim() === 'About Us') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('posh.html')) {
+            if (linkPath === './posh.html' || link.textContent.trim() === 'POSH Services') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('practices.html')) {
+            if (linkPath === './practices.html' || link.textContent.trim() === 'Practices') {
+                link.classList.add('active');
+            }
+        }
+        // Add more conditions for other pages as needed
+    });
+});

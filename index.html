@@ -13,43 +13,56 @@
   <script src="./script.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo.jpg" alt="MY Logo">
-      </div>
-      <div class="link-part">
-        <ul class="nav-links">
-          <li class="hover-effect"><a href="#">Home</a></li>
-          <li class="hover-effect"><a href="./about.html">About Us</a></li>
-          <li class="dropdown hover-effect">
-            <a href="#">Media & Publications</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Articles</a></li>
-              <li><a href="#">News</a></li>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="#" class="logo">
+                <img src="./logo.jpg" alt="Meenakshi Yadav & Associates Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="company-name-1">Meenakshi Yadav</div>
+                    <div class="company-tagline">& Associates</div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="./posh.html" class="dropdown-toggle">
+                        POSH Services
+                    </a>
+                  </li>
+                <li><a href="./practices.html">Practices</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
-          </li>
-          <li><a href="./practices.html" class="hover-effect">Practices</a></li>
-          <li><a href="#" class="hover-effect">Partners</a></li>
-          <li><a href="#" class="hover-effect">Careers</a></li>
-          <li><a href="#" class="hover-effect">Contact Us</a></li>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="#">POSH Services</a></li>
+            <li><a href="./practices.html">Practices</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
         </ul>
-      </div>
-      <div class="search-icon">
-      </div>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
+    </div>
 
   <!-- -- About MY Page --- -->
 <section class="about-my" id="about-section">
   <div class="about-container">
     <div class="about-header">
-      <h3 class="about-title">About Meenakshi Yadav</h3>
+      <h3 class="about-title">About Meenakshi Yadav & Associates</h3>
       <div class="title-underline"></div>
     </div>
     
@@ -67,7 +80,7 @@
       
       <div class="bio-container">
         <div class="bio-card">
-          <p class="bio-text">With over two decades of legal expertise, Meenakshi Yadav is a distinguished advocate and legal consultant specializing in corporate law, intellectual property rights, and civil litigation. As the founding partner of Meenakshi Yadav & Associates, she has successfully handled numerous high-profile cases and provided strategic legal counsel to multinational corporations and startups alike.</p>
+          <p class="bio-text">Meenakshi Yadav & Associates is a full-service law firm with offices in Gurugram, Bengaluru, Chandigarh, and Jaipur. We specialize in Employment Law, PoSH Compliance, White Collar Crimes & Internal Investigations, Matrimonial Disputes, Cheque Bounce Matters, Consumer Disputes, Arbitration, and Civil & Corporate Litigation.</p>
           
           <div class="expertise-list">
             <div class="expertise-item">
@@ -75,8 +88,8 @@
                 <i class="fas fa-balance-scale"></i>
               </div>
               <div class="expertise-detail">
-                <h4>Corporate Law</h4>
-                <span>Strategic Legal Solutions</span>
+                <h4>Employment Law</h4>
+                <span>PoSH Compliance & Litigation</span>
               </div>
             </div>
             <div class="expertise-item">
@@ -84,8 +97,8 @@
                 <i class="fas fa-gavel"></i>
               </div>
               <div class="expertise-detail">
-                <h4>Civil Litigation</h4>
-                <span>Effective Representation</span>
+                <h4>White Collar Crimes</h4>
+                <span>Internal Investigations</span>
               </div>
             </div>
             <div class="expertise-item">
@@ -93,17 +106,17 @@
                 <i class="fas fa-landmark"></i>
               </div>
               <div class="expertise-detail">
-                <h4>Intellectual Property</h4>
-                <span>Rights Protection</span>
+                <h4>Civil & Corporate</h4>
+                <span>Litigation & Arbitration</span>
               </div>
             </div>
           </div>
           
-          <p class="bio-secondary">Her commitment to excellence and innovative approach to legal challenges has earned her recognition as one of the leading lawyers in the NCR region. Beyond her legal practice, Meenakshi is deeply committed to legal education and social justice, regularly conducting workshops and pro bono services through the Yashashish Foundation.</p>
+          <p class="bio-secondary">Known for our client-centric approach and legal excellence, we are committed to delivering practical, innovative, and result-driven solutions. We value diversity, inclusivity, and integrity — making us a trusted partner and employer of choice in the legal field. With establishments spanning from Meenakshi Yadav's practice in 2014 to the Yashashish Foundation in 2016 and MSY in 2020.</p>
           
           <div class="cta-container">
             <a href="#" class="about-cta">Schedule Consultation</a>
-            <a href="#" class="about-cta secondary">View Achievements</a>
+            <a href="#" class="about-cta secondary">View Services</a>
           </div>
         </div>
       </div>
@@ -129,7 +142,7 @@
           <div class="logo-glow"></div>
         </div>
         <div class="foundation-badge">
-          <span class="badge-text">Est. 2020</span>
+          <span class="badge-text">Est. 2016</span>
         </div>
       </div>
       
@@ -176,55 +189,96 @@
 </section>
 
 <!-- Who we are and Articles Page -->
-  <div class="page2"> 
-      <div class="cols">
-        <h3 class="title underline-text">Who we are</h3>
-        <p>Meenakshi Yadav & Associates is a distinguished law firm established in 2020, dedicated to delivering comprehensive legal solutions across various domains. With over 12 years of collective experience, our team specializes in matrimonial, civil, criminal, employment (labor law), taxation, and the Prevention of Sexual Harassment (POSH) laws. Our commitment lies in providing client-centric services that are both legally sound and pragmatically viable, ensuring seamless, efficient, and integrated legal assistance.</p>
-        <p>At the helm is Advocate Meenakshi Yadav, a seasoned legal professional with a Master's in Corporate Law and International Human Rights. Her leadership and vision have been instrumental in guiding the firm to address complex legal challenges effectively. Beyond her legal practice, she is deeply invested in social justice and legal education, regularly conducting workshops and awareness sessions to foster a more informed society.</p>
-        <p>Complementing our legal services, the Yashashish Foundation operates under the guidance of Advocate Meenakshi Yadav and Advocate Ashish Yadav. This non-governmental organization is committed to providing pro bono legal services and community support across the NCR region. Our mission is to ensure access to justice for all, with a particular focus on underprivileged communities. Through legal awareness workshops, free consultations, and educational initiatives, we strive to create a more equitable legal system. The foundation also offers scholarships to aspiring law students and supports various social justice causes.</p>
-        <p>Together, Meenakshi Yadav & Associates and the Yashashish Foundation embody a commitment to legal excellence and social responsibility, working tirelessly to uphold justice and empower communities.</p>
-        <a href="https://docs.google.com/document/d/1OILlmw3m0sJvNnFzQ4ASXg3TAYXMNN5o/edit?usp=sharing&ouid=114745815451606047986&rtpof=true&sd=true" class="btn">Read more</a>
-        <!-- <div class="btn">Read more</div> -->
-      </div>
-
-      <div class="cols">
-        <h3 class="title underline-text">Newsletters</h3>
-        <div class="art1">
-          <div class="date-time">May 2025</div>
-          <div class="main-content-of-article">
-            <h3>Motherhood & the Law: Bridging Rights and Reality</h3>
-            <p>Despite progressive laws like the Maternity Benefit Act and the POSH Act, working mothers in India often face under-enforcement and social stigma. This article sheds light on legal protections, the emotional weight of custody battles, and the urgent need to make workplaces more inclusive for mothers—underscoring the role of legal professionals in ensuring that rights translate into real support.</p>
-            <a href="https://www.linkedin.com/posts/meenakshi-yadav-38a17a36_may-newsletter-activity-7327254675689213952-3eW1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyk5tIBuXPaelghPxDMVg0E6OxOOmNWEW4" class="read-more">Read more</a>
-          </div>
-        </div>
-        <div class="art1">
-          <div class="date-time">April 2025</div>
-          <div class="main-content-of-article">
-            <h3>Supreme Court Reinforces POSH Compliance for Safe Workplaces</h3>
-            <p>In a key April 2025 ruling, the Supreme Court stressed that failure to form a trained, functional Internal Committee violates both the POSH Act and Article 21. It affirmed that victims can seek redress directly via High Courts. This strengthens the call for active, unbiased grievance mechanisms at every workplace, making safety a constitutional mandate, not just legal formality.</p>
-            <a href="https://www.linkedin.com/posts/meenakshi-yadav-38a17a36_april-newsletter-activity-7317065593466023936-qA6t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyk5tIBuXPaelghPxDMVg0E6OxOOmNWEW4" class="read-more">Read more</a>
-          </div>
-        </div>
-        <h3 class="title underline-text">Latest Achievements</h3>
-        <div class="art1">
-          <div class="date-time">Dec 2024</div>
-          <div class="main-content-of-article">
-            <h3>Ranked 1 in NCR</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium omnis neque, modi veniam exercitationem asperiores. Lorem ipsum dolor sit amet.</p>
-            <a href="" class="read-more">Read more</a>
-          </div>
-        </div>
-        <div class="art1">
-          <div class="date-time">Nov 2024</div>
-          <div class="main-content-of-article">
-            <h3>Ranked 1 in NCR</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium omnis neque, modi veniam exercitationem asperiores. Lorem ipsum dolor sit amet.</p>
-            <a href="" class="read-more">Read more</a>
-          </div>
-        </div>
-      </div>
-        
+<div class="page2"> 
+  <div class="cols left-col">
+    <h3 class="title underline-text">Who we are</h3>
+    <div class="content-wrapper">
+      <p class="intro-para">Meenakshi Yadav & Associates is a distinguished law firm established in 2020, dedicated to delivering comprehensive legal solutions across various domains. With over 12 years of collective experience, our team specializes in matrimonial, civil, criminal, employment (labor law), taxation, and the Prevention of Sexual Harassment (POSH) laws.</p>
+      
+      <p class="detail-para">At the helm is Advocate Meenakshi Yadav, a seasoned legal professional with a Master's in Corporate Law and International Human Rights. Her leadership and vision have been instrumental in guiding the firm to address complex legal challenges effectively.</p>
+      
+      <p class="detail-para">Complementing our legal services, the Yashashish Foundation operates under the guidance of Advocate Meenakshi Yadav and Advocate Ashish Yadav. This non-governmental organization is committed to providing pro bono legal services and community support across the NCR region.</p>
+      
+      <p class="closing-para">Together, Meenakshi Yadav & Associates and the Yashashish Foundation embody a commitment to legal excellence and social responsibility, working tirelessly to uphold justice and empower communities.</p>
+      
+      <a href="https://docs.google.com/document/d/1OILlmw3m0sJvNnFzQ4ASXg3TAYXMNN5o/edit?usp=sharing&ouid=114745815451606047986&rtpof=true&sd=true" class="btn">
+        <i class="fas fa-arrow-right"></i> Read More
+      </a>
+    </div>
   </div>
+
+  <div class="cols right-col">
+    <div class="section-block">
+      <h3 class="title underline-text">Newsletters</h3>
+      <div class="articles-container">
+        <article class="art1">
+          <div class="date-badge">
+            <span class="month">May</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="article-content">
+            <h4 class="article-title">Motherhood & the Law: Bridging Rights and Reality</h4>
+            <p class="article-excerpt">Despite progressive laws like the Maternity Benefit Act and the POSH Act, working mothers in India often face under-enforcement and social stigma. This article sheds light on legal protections and the urgent need to make workplaces more inclusive.</p>
+            <a href="https://www.linkedin.com/posts/meenakshi-yadav-38a17a36_may-newsletter-activity-7327254675689213952-3eW1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyk5tIBuXPaelghPxDMVg0E6OxOOmNWEW4" class="read-more">
+              <i class="fas fa-external-link-alt"></i> Read Article
+            </a>
+          </div>
+        </article>
+
+        <article class="art1">
+          <div class="date-badge">
+            <span class="month">Apr</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="article-content">
+            <h4 class="article-title">Supreme Court Reinforces POSH Compliance for Safe Workplaces</h4>
+            <p class="article-excerpt">In a key April 2025 ruling, the Supreme Court stressed that failure to form a trained, functional Internal Committee violates both the POSH Act and Article 21, making safety a constitutional mandate.</p>
+            <a href="https://www.linkedin.com/posts/meenakshi-yadav-38a17a36_april-newsletter-activity-7317065593466023936-qA6t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEyk5tIBuXPaelghPxDMVg0E6OxOOmNWEW4" class="read-more">
+              <i class="fas fa-external-link-alt"></i> Read Article
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="section-block achievements-section">
+      <h3 class="title underline-text">Latest Achievements</h3>
+      <div class="achievements-container">
+        <article class="achievement-item">
+          <div class="date-badge achievement-badge">
+            <span class="month">Dec</span>
+            <span class="year">2024</span>
+          </div>
+          <div class="achievement-content">
+            <h4 class="achievement-title">
+              <i class="fas fa-trophy"></i> Ranked #1 in NCR
+            </h4>
+            <p class="achievement-desc">Excellence in legal services recognition across the National Capital Region for outstanding client satisfaction and case success rates.</p>
+            <a href="#" class="read-more">
+              <i class="fas fa-info-circle"></i> Learn More
+            </a>
+          </div>
+        </article>
+
+        <article class="achievement-item">
+          <div class="date-badge achievement-badge">
+            <span class="month">Nov</span>
+            <span class="year">2024</span>
+          </div>
+          <div class="achievement-content">
+            <h4 class="achievement-title">
+              <i class="fas fa-award"></i> Legal Excellence Award
+            </h4>
+            <p class="achievement-desc">Recognition for outstanding contribution to legal education and community service through the Yashashish Foundation initiatives.</p>
+            <a href="#" class="read-more">
+              <i class="fas fa-info-circle"></i> Learn More
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- ------ Page 3 --------- -->
 
@@ -331,13 +385,13 @@
               </div>
             </div>
             <div class="member-info">
-              <h3>Meenakshi Yadav</h3>
+              <h3>Adv. Meenakshi Yadav</h3>
               <p class="member-role">Founder & Principal Attorney</p>
               <p class="member-location"><i class="fas fa-map-marker-alt"></i> Gurgaon, NCR</p>
             </div>
           </div>
           <div class="member-back">
-            <p class="member-bio">With over 20 years of legal expertise, Meenakshi specializes in corporate law, intellectual property rights, and civil litigation. She is committed to legal excellence and social responsibility.</p>
+            <p class="member-bio">With over 13 years of legal expertise, Meenakshi specializes in corporate law, intellectual property rights, and civil litigation. She is committed to legal excellence and social responsibility.</p>
             <div class="member-contact">
               <a href="#" class="team-btn">Download V-Card</a>
               <a href="mailto:contact@myassociates.com" class="team-btn">Contact Now</a>
@@ -359,7 +413,7 @@
             </div>
             <div class="member-info">
               <h3>Ashish Yadav</h3>
-              <p class="member-role">Senior Partner</p>
+              <p class="member-role">Advocate</p>
               <p class="member-location"><i class="fas fa-map-marker-alt"></i> Gurgaon, NCR</p>
             </div>
           </div>
@@ -377,7 +431,7 @@
         <div class="member-card">
           <div class="member-front">
             <div class="member-img">
-              <img src="my-img.png" alt="Gayeka Jain">
+              <img src="./Images/Gayeka.jpg" alt="Gayeka Jain">
               <div class="member-social">
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -386,8 +440,8 @@
             </div>
             <div class="member-info">
               <h3>Gayeka Jain</h3>
-              <p class="member-role">POSH Specialist</p>
-              <p class="member-location"><i class="fas fa-map-marker-alt"></i> Delhi</p>
+              <p class="member-role">Advocate</p>
+              <p class="member-location"><i class="fas fa-map-marker-alt"></i> Gurgaon</p>
             </div>
           </div>
           <div class="member-back">
@@ -404,7 +458,7 @@
         <div class="member-card">
           <div class="member-front">
             <div class="member-img">
-              <img src="my-img.png" alt="Serene Yadav">
+              <img src="./Images/Ramavtar.jpg" alt="Ramavtar Singh Yadav">
               <div class="member-social">
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -412,13 +466,13 @@
               </div>
             </div>
             <div class="member-info">
-              <h3>Serene Yadav</h3>
-              <p class="member-role">Labor Law Expert</p>
-              <p class="member-location"><i class="fas fa-map-marker-alt"></i> Noida</p>
+              <h3>Ramavtar Singh Yadav</h3>
+              <p class="member-role">Advocate</p>
+              <p class="member-location"><i class="fas fa-map-marker-alt"></i> Jaipur</p>
             </div>
           </div>
           <div class="member-back">
-            <p class="member-bio">With extensive experience in labor disputes and employment law, Rajiv provides comprehensive legal solutions for both employers and employees.</p>
+            <p class="member-bio">With extensive experience in labor disputes and employment law, Ramavtar provides comprehensive legal solutions for both employers and employees.</p>
             <div class="member-contact">
               <a href="#" class="team-btn">Download V-Card</a>
               <a href="mailto:rajiv@myassociates.com" class="team-btn">Contact Now</a>
@@ -531,7 +585,44 @@
   </footer>
 
    <script>
-   
+// Add this script to all your HTML pages (before closing </body> tag)
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current page URL
+    const currentPage = window.location.pathname;
+    
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to the current page link
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        
+        // Handle different URL patterns
+        if (currentPage.includes('index.html') || currentPage === '/' || currentPage.endsWith('/')) {
+            if (linkPath === './index.html' || linkPath === '/' || link.textContent.trim() === 'Home') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('about.html')) {
+            if (linkPath === './about.html' || link.textContent.trim() === 'About Us') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('posh.html')) {
+            if (linkPath === './posh.html' || link.textContent.trim() === 'POSH Services') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('practices.html')) {
+            if (linkPath === './practices.html' || link.textContent.trim() === 'Practices') {
+                link.classList.add('active');
+            }
+        }
+        // Add more conditions for other pages as needed
+    });
+});
    </script>
 </body>
 </html>

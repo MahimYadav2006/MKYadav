@@ -15,41 +15,50 @@
 </head>
 <body>
 <!-- Reuse the same header/navbar from main page -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo.jpg" alt="MY Logo">
-        <!-- <span>Meenakshi Yadav & Associates</span> -->
-      </div>
-      <div class="link-part">
-        <ul class="nav-links">
-          <li class="hover-effect"><a href="./index.html">Home</a></li>
-          <li class="hover-effect"><a href="./about.html">About Us</a></li>
-          <li class="dropdown hover-effect">
-            <a href="#">Media & Publications</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Articles</a></li>
-              <li><a href="#">News</a></li>
-            </ul>
-          </li>
-          <li><a href="./practices.html" class="hover-effect">Practices</a></li>
-          <li><a href="#" class="hover-effect">Partners</a></li>
-          <li><a href="#" class="hover-effect">Careers</a></li>
-          <li><a href="#" class="hover-effect">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="search-icon">
-      </div>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="#" class="logo">
+                <img src="./logo.jpg" alt="Meenakshi Yadav & Associates Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="company-name-1">Meenakshi Yadav</div>
+                    <div class="company-tagline">& Associates</div>
+                </div>
+            </a>
 
-  
-  <div class="line"></div>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li class="dropdown">
+                    <a href="./posh.html" class="dropdown-toggle">
+                        POSH Services
+                    </a>
+                </li>
+                <li><a href="./practices.html">Practices</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="#">POSH Services</a></li>
+            <li><a href="./practices.html">Practices</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="about-hero">
@@ -221,14 +230,44 @@
   </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
-        });
+// Add this script to all your HTML pages (before closing </body> tag)
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current page URL
+    const currentPage = window.location.pathname;
+    
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to the current page link
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        
+        // Handle different URL patterns
+        if (currentPage.includes('index.html') || currentPage === '/' || currentPage.endsWith('/')) {
+            if (linkPath === './index.html' || linkPath === '/' || link.textContent.trim() === 'Home') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('about.html')) {
+            if (linkPath === './about.html' || link.textContent.trim() === 'About Us') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('posh.html')) {
+            if (linkPath === './posh.html' || link.textContent.trim() === 'POSH Services') {
+                link.classList.add('active');
+            }
+        } else if (currentPage.includes('practices.html')) {
+            if (linkPath === './practices.html' || link.textContent.trim() === 'Practices') {
+                link.classList.add('active');
+            }
+        }
+        // Add more conditions for other pages as needed
+    });
+});
     </script>
 </body>
 </html>
