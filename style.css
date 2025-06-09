@@ -461,6 +461,10 @@ a:hover {
 
 /* About Section - More Compact */
 /* About Meenakshi Yadav Section - Enhanced Version */
+
+
+
+/* About Meenakshi Yadav Section - Enhanced Version */
 :root {
   --bg-color: #000000; /* Black background */
   --text-color: #fff; /* White text */
@@ -557,12 +561,16 @@ a:hover {
   justify-content: center;
 }
 
-/* Profile Image Styling */
+/* Profile Image Styling - ENHANCED RESPONSIVENESS */
 .profile-container {
   flex: 0 1 300px;
   position: relative;
   opacity: 0;
   animation: fadeInLeft 1s ease forwards 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
 }
 
 .profile-frame {
@@ -576,6 +584,11 @@ a:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
+  /* Ensure consistent circular shape across all devices */
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-frame:hover {
@@ -587,8 +600,11 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   border-radius: 50%;
   transition: transform 0.7s ease;
+  /* Ensure the image always fills the circular container properly */
+  display: block;
 }
 
 .profile-frame:hover .my-img {
@@ -605,12 +621,13 @@ a:hover {
   z-index: -1;
   opacity: 0;
   animation: pulseGlow 3s infinite alternate 1s;
+  border-radius: 50%;
 }
 
 .experience-badge {
   position: absolute;
   bottom: 10px;
-  right: 0;
+  right: -10px;
   background: linear-gradient(135deg, var(--accent-color), #97700d);
   border-radius: 50px;
   padding: 10px 20px;
@@ -622,6 +639,8 @@ a:hover {
   transform: translateX(20px);
   opacity: 0;
   animation: slideInBadge 1s ease forwards 1.2s;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .experience-years {
@@ -697,6 +716,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 15px;
   margin: 25px 0;
+  justify-content: space-between;
 }
 
 .expertise-item {
@@ -772,6 +792,7 @@ a:hover {
   overflow: hidden;
   display: inline-block;
   z-index: 1;
+  white-space: nowrap;
 }
 
 .about-cta::before {
@@ -903,85 +924,6 @@ a:hover {
   }
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 992px) {
-  .about-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .profile-container {
-    margin: 0 auto;
-  }
-  
-  .bio-card {
-    padding: 25px;
-  }
-  
-  .about-title {
-    font-size: 2.2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .about-my {
-    margin: 60px auto;
-  }
-  
-  .expertise-list {
-    flex-direction: column;
-  }
-  
-  .expertise-item {
-    flex-basis: 100%;
-  }
-  
-  .bio-text {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .cta-container {
-    flex-direction: column;
-  }
-  
-  .about-cta {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .about-title {
-    font-size: 1.8rem;
-  }
-  
-  .profile-frame {
-    width: 220px;
-    height: 220px;
-  }
-  
-  .experience-badge {
-    padding: 8px 15px;
-    transform: translateX(0);
-  }
-  
-  .experience-years {
-    font-size: 1.2rem;
-  }
-  
-  .experience-text {
-    font-size: 0.7rem;
-  }
-  
-  .bio-card {
-    padding: 20px 15px;
-  }
-}
-
-
-/* Animations on page 1*/
-
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -1006,17 +948,18 @@ a:hover {
 
 /* Apply the animations to the elements */
 .rest-all img {
-  animation: slideInLeft 1.2s ease-out forwards; /* Image slides in from the left */
-  opacity: 0; /* Ensure it's initially hidden */
+  animation: slideInLeft 1.2s ease-out forwards;
+  opacity: 0;
 }
 
 .rest-all p {
-  animation: slideInRight 1.2s ease-out forwards; /* Paragraph slides in from the right */
-  opacity: 0; /* Ensure it's initially hidden */
+  animation: slideInRight 1.2s ease-out forwards;
+  opacity: 0;
 }
 
-/* Responsiveness for About-MY Section */
+/* ENHANCED RESPONSIVE ADJUSTMENTS */
 
+/* Large Desktop */
 @media screen and (min-width: 1400px) {
   .about-my {
     max-width: 1400px;
@@ -1030,7 +973,27 @@ a:hover {
   .bio-text, .bio-secondary {
     font-size: 1.2rem;
   }
+  
+  .profile-frame {
+    width: 320px;
+    height: 320px;
+  }
 }
+
+/* Desktop/Tablet */
+@media screen and (max-width: 1200px) {
+  .profile-frame {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .experience-badge {
+    right: -5px;
+    padding: 8px 16px;
+  }
+}
+
+/* Tablet */
 @media screen and (max-width: 992px) {
   .about-my {
     margin: 60px auto;
@@ -1038,7 +1001,31 @@ a:hover {
   }
   
   .about-content {
-    gap: 40px;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .profile-container {
+    margin: 0 auto;
+    flex: none;
+  }
+  
+  .profile-frame {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .experience-badge {
+    right: 0;
+    bottom: 15px;
+  }
+  
+  .bio-card {
+    padding: 25px;
+  }
+  
+  .about-title {
+    font-size: 2.2rem;
   }
   
   .expertise-list {
@@ -1058,22 +1045,64 @@ a:hover {
     text-align: center;
   }
 }
+
+/* Mobile Large */
 @media screen and (max-width: 768px) {
+  .about-my {
+    margin: 50px auto;
+    padding: 0 15px;
+  }
+  
   .about-header {
     margin-bottom: 30px;
   }
   
+  .about-title {
+    font-size: 2rem;
+  }
+  
   .profile-container {
-    transform: scale(0.9);
     margin-bottom: 10px;
+  }
+  
+  .profile-frame {
+    width: 220px;
+    height: 220px;
+    border-width: 2px;
+    padding: 6px;
+  }
+  
+  .experience-badge {
+    padding: 8px 14px;
+    bottom: 10px;
+    right: 0;
+  }
+  
+  .experience-years {
+    font-size: 1.3rem;
+  }
+  
+  .experience-text {
+    font-size: 0.75rem;
   }
   
   .bio-card {
     margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .bio-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .bio-text::first-letter {
+    font-size: 2.2rem;
   }
   
   .expertise-list {
     gap: 12px;
+    flex-direction: column;
   }
   
   .expertise-item {
@@ -1081,14 +1110,53 @@ a:hover {
     padding: 12px;
   }
   
+  .cta-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
   .about-cta {
     padding: 10px 20px;
     font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+  
+  .rest-all img,
+  .rest-all p {
+    animation-duration: 0.8s;
   }
 }
-@media screen and (max-width: 480px) {
+
+/* Mobile Medium */
+@media screen and (max-width: 580px) {
   .about-my {
     margin: 40px auto;
+    padding: 0 12px;
+  }
+  
+  .profile-frame {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .experience-badge {
+    padding: 6px 12px;
+    transform: scale(0.9);
+    right: -5px;
+    bottom: 8px;
+  }
+  
+  .about-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 480px) {
+  .about-my {
+    margin: 30px auto;
     padding: 0 10px;
   }
   
@@ -1096,9 +1164,38 @@ a:hover {
     margin-bottom: 25px;
   }
   
+  .about-title {
+    font-size: 1.7rem;
+  }
+  
   .profile-container {
+    margin: -10px auto 15px;
+  }
+  
+  .profile-frame {
+    width: 180px;
+    height: 180px;
+    border-width: 2px;
+    padding: 5px;
+  }
+  
+  .experience-badge {
+    padding: 6px 10px;
     transform: scale(0.85);
-    margin: -15px auto;
+    right: -8px;
+    bottom: 5px;
+  }
+  
+  .experience-years {
+    font-size: 1.1rem;
+  }
+  
+  .experience-text {
+    font-size: 0.7rem;
+  }
+  
+  .bio-card {
+    padding: 18px 15px;
   }
   
   .bio-text {
@@ -1139,26 +1236,58 @@ a:hover {
     gap: 10px;
   }
 }
+
+/* Mobile Extra Small */
 @media screen and (max-width: 360px) {
   .about-title {
     font-size: 1.6rem;
   }
   
   .profile-frame {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
   }
   
   .experience-badge {
-    transform: scale(0.9);
-    right: -5px;
-    bottom: 5px;
+    transform: scale(0.8);
+    right: -10px;
+    bottom: 3px;
   }
   
   .bio-card {
     padding: 15px 12px;
   }
+  
+  .profile-glow {
+    top: -15px;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+  }
 }
+
+/* Mobile Ultra Small */
+@media screen and (max-width: 320px) {
+  .about-my {
+    padding: 0 8px;
+  }
+  
+  .profile-frame {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .experience-badge {
+    transform: scale(0.75);
+    right: -12px;
+  }
+  
+  .about-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Performance Optimizations */
 @media (max-width: 768px) {
   .profile-glow {
     animation: pulseGlow 4s infinite alternate 1s;
@@ -1178,6 +1307,8 @@ a:hover {
     }
   }
 }
+
+/* Accessibility and Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .profile-glow,
   .title-underline::before,
@@ -1196,42 +1327,28 @@ a:hover {
     animation: none;
   }
 }
-@media screen and (max-width: 768px) {
-  .rest-all img,
-  .rest-all p {
-    animation-duration: 0.8s;
-  }
-}
-.expertise-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 25px 0;
-  justify-content: space-between;
-}
-@media screen and (max-width: 480px) {
-  .cta-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
+
+/* Text wrapping and overflow handling */
 .bio-card {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
 
-.about-cta {
-  white-space: nowrap;
-}
-
+/* Ensure proper spacing and alignment on all devices */
 @media screen and (max-width: 768px) {
-  .about-cta {
-    white-space: normal;
+  .profile-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .experience-badge {
+    position: absolute;
+    z-index: 2;
   }
 }
-
-
-
 
 
 
