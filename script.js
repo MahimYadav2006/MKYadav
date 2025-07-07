@@ -207,3 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add more conditions for other pages as needed
     });
 });
+
+
+
+// // For the navbar's responsive toggle
