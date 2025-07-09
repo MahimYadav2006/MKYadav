@@ -19,53 +19,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
   </head>
   <body>
-    <!-- Header/navbar from your existing code -->
     <header>
-      <nav class="navbar" id="navbar">
-        <a href="#" class="logo">
-          <img
-            src="./logo.jpg"
-            alt="Meenakshi Yadav & Associates Logo"
-            class="logo-img"
-          />
-          <div class="logo-text">
-            <div class="company-name-1">Meenakshi Yadav</div>
-            <div class="company-tagline">& Associates</div>
-          </div>
-        </a>
+        <nav class="navbar" id="navbar">
+            <a href="/index.html" class="logo">
+                <img src="./logo.jpg" alt="Meenakshi Yadav & Associates Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="company-name-1">Meenakshi Yadav</div>
+                    <div class="company-tagline">& Associates</div>
+                </div>
+            </a>
 
-        <ul class="nav-links">
-          <li><a href="./index.html" class="active">Home</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li class="dropdown">
-            <a href="./posh.html" class="dropdown-toggle"> POSH Services </a>
-          </li>
-          <li><a href="./practices.html">Practices</a></li>
-          <li><a href="#">Partners</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="./posh.html" class="dropdown-toggle">
+                        POSH Services
+                    </a>
+                  </li>
+                <li><a href="./practices.html">Practices</a></li>
+                <li><a href="./partners.html">Partners</a></li>
+                <li><a href="https://docs.google.com/forms/d/1pkR2zL8up-HBleYN2O1qZNmFhH0OqdLsktxEXyHkfEA/edit">Careers</a></li>
+                <!-- <li><a href="#">Contact Us</a></li> -->
+                 <li>
+                <!-- Calendly link widget begin -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/iamraoboy2000/30min?background_color=b8870b&text_color=000000'});return false;">Contact Us</a>
+                <!-- Calendly link widget end -->
+                 </li>
+            </ul>
 
-        <div class="mobile-toggle" id="mobileToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
 
     <!-- Mobile Navigation -->
     <div class="mobile-nav" id="mobileNav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="./about.html">About Us</a></li>
-        <li><a href="#">POSH Services</a></li>
-        <li><a href="./practices.html">Practices</a></li>
-        <li><a href="#">Partners</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./posh.html">POSH Services</a></li>
+            <li><a href="./practices.html">Practices</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="https://docs.google.com/forms/d/1pkR2zL8up-HBleYN2O1qZNmFhH0OqdLsktxEXyHkfEA/edit">Careers</a></li>
+            <!-- <li><a href="#">Contact Us</a></li> -->
+              <li>
+            <!-- Calendly link widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/iamraoboy2000/30min?background_color=b8870b&text_color=000000'});return false;">Contact Us</a>
+            <!-- Calendly link widget end -->
+              </li>
+        </ul>
     </div>
+
 
     <!-- Hero Section -->
     <section class="practices-hero">
@@ -133,7 +145,7 @@
             Complaints Committee in Gurugram, we deliver authoritative guidance
             in creating safer workplaces.
           </p>
-          <a href="#" class="read-more">Read More</a>
+          <a href="./posh.html" class="read-more">Read More</a>
         </div>
 
         <!-- Labour and Industrial Laws -->
@@ -364,130 +376,99 @@
           Connect with our team for specialized legal support tailored to your
           needs.
         </p>
-        <a href="#" class="cta-button">Contact Us</a>
+        <!-- <a href="#" class="cta-button"> -->
+                <button class="cta-button">
+                <!-- Calendly link widget begin -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <a href="" style="color: black;"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/iamraoboy2000/30min?background_color=b8870b&text_color=000000'});return false;">Contact Us</a>
+                <!-- Calendly link widget end -->
+                 </button>
+        <!-- </a> -->
       </div>
     </section>
 
-    <!-- Footer from your existing code -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section about">
-          <div class="logo-container">
-            <div class="logo">
-              <img src="logo.jpg" alt="Logo" class="footer-logo" />
-            </div>
-            <h2 class="company-name">Meenakshi Yadav and Associates</h2>
+  <!-- ------ Footer -------- -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <div class="logo-container">
+          <div class="logo">
+            <img src="logo.jpg" alt="Logo" class="footer-logo">
           </div>
-          <p class="about-text">
-            We are dedicated to providing exceptional services and creating
-            innovative solutions for our customers. Join us on our journey to
-            excellence.
-          </p>
-          <div class="contact-info">
-            <div>
-              <i class="fas fa-map-marker-alt"></i> 123 Street Name, City,
-              Country
-            </div>
-            <div><i class="fas fa-phone"></i> +1 234 567 8900</div>
-            <div><i class="fas fa-envelope"></i> info@example.com</div>
-          </div>
+          <h2 class="company-name">Meenakshi Yadav and Associates</h2>
         </div>
-
-        <div class="footer-section quick-links">
-          <h2>Quick Links</h2>
-          <div class="links">
-            <ul>
-              <li>
-                <a href="#" class="footer-link"
-                  ><span class="link-icon"><i class="fas fa-home"></i></span
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="#" class="footer-link"
-                  ><span class="link-icon"
-                    ><i class="fas fa-info-circle"></i></span
-                  >About</a
-                >
-              </li>
-              <li>
-                <a href="#" class="footer-link"
-                  ><span class="link-icon"
-                    ><i class="fas fa-handshake"></i></span
-                  >Partners</a
-                >
-              </li>
-              <li>
-                <a href="#" class="footer-link"
-                  ><span class="link-icon"
-                    ><i class="fas fa-user-graduate"></i></span
-                  >Internships</a
-                >
-              </li>
-              <li>
-                <a href="#" class="footer-link"
-                  ><span class="link-icon"
-                    ><i class="fas fa-briefcase"></i></span
-                  >Retainerships</a
-                >
-              </li>
-              <li>
-                <a href="#" class="footer-link"
-                  ><span class="link-icon"><i class="fas fa-envelope"></i></span
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-section connect">
-          <h2>Connect With Us</h2>
-          <div class="social-icons">
-            <a href="#" class="social-icon linkedin">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="social-icon instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-icon facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-          <div class="newsletter">
-            <h3>Subscribe to our Newsletter</h3>
-            <form>
-              <input type="email" placeholder="Enter your email" />
-              <button type="submit" class="btn-subscribe">Subscribe</button>
-            </form>
-          </div>
+        <p class="about-text">We are dedicated to providing exceptional services and creating innovative solutions for our customers. Join us on our journey to excellence.</p>
+        <div class="contact-info">
+          <div><i class="fas fa-map-marker-alt"></i> Lawyers Chamber No. 132, 9 C-Block, Gurgaon, Haryana, 122001</div>
+          <div><i class="fas fa-phone"></i> +91 9460161666,+91 9610779624,+91 7838595711 </div>
+          <div><i class="fas fa-envelope"></i>meenakshi1yadav@gmail.com, posh_updates@yashashish.com</div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="copyright">
-          &copy; 2025 Company Name. All rights reserved.
-        </div>
-        <div class="footer-nav">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Sitemap</a>
+      <div class="footer-section quick-links">
+        <h2>Quick Links</h2>
+        <div class="links">
+          <ul>
+            <li><a href="./index.html" class="footer-link"><span class="link-icon"><i class="fas fa-home"></i></span>Home</a></li>
+            <li><a href="./about.html" class="footer-link"><span class="link-icon"><i class="fas fa-info-circle"></i></span>About</a></li>
+            <li><a href="./partners.html" class="footer-link"><span class="link-icon"><i class="fas fa-handshake"></i></span>Partners</a></li>
+            <li><a href="https://docs.google.com/forms/d/1pkR2zL8up-HBleYN2O1qZNmFhH0OqdLsktxEXyHkfEA/edit" class="footer-link"><span class="link-icon"><i class="fas fa-user-graduate"></i></span>Internships</a></li>
+            <!-- <li><a href="#" class="footer-link"><span class="link-icon"><i class="fas fa-briefcase"></i></span>Retainerships</a></li> -->
+            <li><a href="#" class="footer-link"><span class="link-icon"><i class="fas fa-envelope"></i></span>Contact Us</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-animation">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+      <div class="footer-section connect">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+          <a href="http://linkedin.com/company/meenakshi-yadav-associates/" class="social-icon linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/law_yafoundation/?hl=en" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/yashashishfoundation/" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.threads.com/@law_yafoundation" class="social-icon twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <!-- <div class="newsletter">
+          <h3>Subscribe to our Newsletter</h3>
+          <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div> -->
       </div>
-    </footer>
+    </div>
 
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2025 Meenakshi Yadav and Associates. All rights reserved. &nbsp;|&nbsp;
+      </div>
+      <div class="copyright">
+        Developed by Mahim Yadav
+      </div>
+    </div>
+
+    <div class="footer-animation">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </footer>
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/iamraoboy2000/30min', text: 'Schedule time with me', color: '#b8870b', textColor: '#000000' }); }</script>
+<!-- Calendly badge widget end -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // Mobile menu functionality

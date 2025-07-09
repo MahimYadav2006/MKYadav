@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - Meenakshi Yadav & Associates</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #fff;
+            --accent-color: #b8870b;
+            --hover-color: #ff4500;
+            --border-color: #333;
+            --secondary-text-color: #bbb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        /* .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-color);
+            border-bottom: 2px solid var(--border-color);
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo img {
+            border: 3.5px solid #8C7058;
+            border-radius: 70%;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--hover-color);
+        } */
+
+        /* Hero Section */
+        .hero-section {
+            margin-top: 120px;
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, rgba(184, 135, 11, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23b8870b" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
+            z-index: -1;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-family: "Merriweather", serif;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary-text-color);
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-color);
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        /* Partners Section */
+        .partners-section {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: "Merriweather", serif;
+            color: var(--accent-color);
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .partner-card {
+            background: linear-gradient(145deg, rgba(51, 51, 51, 0.1), rgba(0, 0, 0, 0.3));
+            border: 1px solid rgba(184, 135, 11, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .partner-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(184, 135, 11, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .partner-card:hover::before {
+            left: 100%;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(184, 135, 11, 0.2);
+        }
+
+        .partner-logo {
+            width: 120px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            filter: grayscale(100%) brightness(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover .partner-logo {
+            filter: grayscale(0%) brightness(1);
+            transform: scale(1.05);
+        }
+
+        .partner-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .partner-description {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+            line-height: 1.4;
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            background: linear-gradient(135deg, rgba(184, 135, 11, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+            padding: 80px 20px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(184, 135, 11, 0.1);
+            border: 1px solid rgba(184, 135, 11, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(184, 135, 11, 0.2);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(184, 135, 11, 0.2) 0%, rgba(0, 0, 0, 1) 100%);
+            padding: 80px 20px;
+            text-align: center;
+            margin: 80px 0;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-family: "Merriweather", serif;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            color: var(--secondary-text-color);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), #d4a017);
+            color: var(--bg-color);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(184, 135, 11, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .partner-card {
+                padding: 20px;
+            }
+
+            .partner-logo {
+                width: 100px;
+                height: 60px;
+            }
+
+            .navbar {
+                padding: 10px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Loading animation for images */
+        .partner-logo {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="/index.html" class="logo">
+                <img src="./logo.jpg" alt="Meenakshi Yadav & Associates Logo" class="logo-img">
+                <div class="logo-text">
+                    <div class="company-name-1">Meenakshi Yadav</div>
+                    <div class="company-tagline">& Associates</div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="./posh.html" class="dropdown-toggle">
+                        POSH Services
+                    </a>
+                  </li>
+                <li><a href="./practices.html">Practices</a></li>
+                <li><a href="./partners.html">Partners</a></li>
+                <li><a href="https://docs.google.com/forms/d/1pkR2zL8up-HBleYN2O1qZNmFhH0OqdLsktxEXyHkfEA/edit">Careers</a></li>
+                <!-- <li><a href="#">Contact Us</a></li> -->
+                 <li>
+                <!-- Calendly link widget begin -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/iamraoboy2000/30min?background_color=b8870b&text_color=000000'});return false;">Contact Us</a>
+                <!-- Calendly link widget end -->
+                 </li>
+            </ul>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./posh.html">POSH Services</a></li>
+            <li><a href="./practices.html">Practices</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="https://docs.google.com/forms/d/1pkR2zL8up-HBleYN2O1qZNmFhH0OqdLsktxEXyHkfEA/edit">Careers</a></li>
+            <!-- <li><a href="#">Contact Us</a></li> -->
+              <li>
+            <!-- Calendly link widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/iamraoboy2000/30min?background_color=b8870b&text_color=000000'});return false;">Contact Us</a>
+            <!-- Calendly link widget end -->
+              </li>
+        </ul>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Our Trusted Partners</h1>
+        <p class="hero-subtitle">Building Excellence Through Strategic Partnerships</p>
+        <p class="hero-description">
+            We are proud to collaborate with industry leaders and innovative organizations across various sectors. 
+            Our partnerships enable us to deliver comprehensive legal solutions and drive meaningful change in the business landscape.
+        </p>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <h2 class="section-title">Some of Our Clients</h2>
+        <div class="partners-grid">
+            <div class="partner-card">
+                <img src="./Images/Clients/Admiral.png" alt="Admiral" class="partner-logo">
+                <div class="partner-name">Admiral</div>
+                <div class="partner-description">Leading maritime solutions provider</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Adra.png" alt="Adra" class="partner-logo">
+                <div class="partner-name">Adra</div>
+                <div class="partner-description">Innovative technology solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/AG.png" alt="AG" class="partner-logo">
+                <div class="partner-name">AG</div>
+                <div class="partner-description">Global consulting excellence</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Bellsonica.png" alt="Bellsonica" class="partner-logo">
+                <div class="partner-name">Bellsonica</div>
+                <div class="partner-description">Audio technology innovations</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/BharatSeats.png" alt="Bharat Seats" class="partner-logo">
+                <div class="partner-name">Bharat Seats</div>
+                <div class="partner-description">Automotive seating solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Claas.png" alt="Claas" class="partner-logo">
+                <div class="partner-name">Claas</div>
+                <div class="partner-description">Agricultural machinery leader</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/CleanMobility.png" alt="Clean Mobility" class="partner-logo">
+                <div class="partner-name">Clean Mobility</div>
+                <div class="partner-description">Sustainable transportation solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Donaldson.png" alt="Donaldson" class="partner-logo">
+                <div class="partner-name">Donaldson</div>
+                <div class="partner-description">Filtration technology experts</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/FCC.png" alt="FCC" class="partner-logo">
+                <div class="partner-name">FCC</div>
+                <div class="partner-description">Construction and services</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Federal.png" alt="Federal" class="partner-logo">
+                <div class="partner-name">Federal</div>
+                <div class="partner-description">Government solutions provider</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/GLS.png" alt="GLS" class="partner-logo">
+                <div class="partner-name">GLS</div>
+                <div class="partner-description">Logistics and delivery services</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Greenfuel.png" alt="Greenfuel" class="partner-logo">
+                <div class="partner-name">Greenfuel</div>
+                <div class="partner-description">Renewable energy solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Forvia.png" alt="Forvia" class="partner-logo">
+                <div class="partner-name">Forvia</div>
+                <div class="partner-description">Automotive technology leader</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Hanon.png" alt="Hanon" class="partner-logo">
+                <div class="partner-name">Hanon</div>
+                <div class="partner-description">Thermal management systems</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Astemo.png" alt="Astemo" class="partner-logo">
+                <div class="partner-name">Astemo</div>
+                <div class="partner-description">Advanced mobility solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/HNV.png" alt="HNV" class="partner-logo">
+                <div class="partner-name">HNV</div>
+                <div class="partner-description">Healthcare and nutrition</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Honda.png" alt="Honda" class="partner-logo">
+                <div class="partner-name">Honda</div>
+                <div class="partner-description">Automotive innovation leader</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/HouseOfBeauty.png" alt="House of Beauty" class="partner-logo">
+                <div class="partner-name">House of Beauty</div>
+                <div class="partner-description">Beauty and wellness solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/IGSEC.png" alt="IGSEC" class="partner-logo">
+                <div class="partner-name">IGSEC</div>
+                <div class="partner-description">Security solutions provider</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Jakson.png" alt="Jakson" class="partner-logo">
+                <div class="partner-name">Jakson</div>
+                <div class="partner-description">Energy and infrastructure</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/JNU.png" alt="JNU" class="partner-logo">
+                <div class="partner-name">JNU</div>
+                <div class="partner-description">Academic excellence</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Johnson.png" alt="Johnson" class="partner-logo">
+                <div class="partner-name">Johnson</div>
+                <div class="partner-description">Consumer goods leader</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Lumax.png" alt="Lumax" class="partner-logo">
+                <div class="partner-name">Lumax</div>
+                <div class="partner-description">Automotive lighting solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/MIESP.png" alt="MIESP" class="partner-logo">
+                <div class="partner-name">MIESP</div>
+                <div class="partner-description">Industrial solutions provider</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/MIL.png" alt="MIL" class="partner-logo">
+                <div class="partner-name">MIL</div>
+                <div class="partner-description">Manufacturing excellence</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/MITSUBA.png" alt="MITSUBA" class="partner-logo">
+                <div class="partner-name">MITSUBA</div>
+                <div class="partner-description">Electrical automotive components</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/NEC.png" alt="NEC" class="partner-logo">
+                <div class="partner-name">NEC</div>
+                <div class="partner-description">Technology and innovation</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/OCAP.png" alt="OCAP" class="partner-logo">
+                <div class="partner-name">OCAP</div>
+                <div class="partner-description">Precision engineering</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/OILES.png" alt="OILES" class="partner-logo">
+                <div class="partner-name">OILES</div>
+                <div class="partner-description">Bearing and component solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Pilot.png" alt="Pilot" class="partner-logo">
+                <div class="partner-name">Pilot</div>
+                <div class="partner-description">Aviation and logistics</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/RICO.png" alt="RICO" class="partner-logo">
+                <div class="partner-name">RICO</div>
+                <div class="partner-description">Automotive components</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Sejong.png" alt="Sejong" class="partner-logo">
+                <div class="partner-name">Sejong</div>
+                <div class="partner-description">Industrial manufacturing</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Resonac.png" alt="Resonac" class="partner-logo">
+                <div class="partner-name">Resonac</div>
+                <div class="partner-description">Chemical solutions</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Sony.png" alt="Sony" class="partner-logo">
+                <div class="partner-name">Sony</div>
+                <div class="partner-description">Technology and entertainment</div>
+            </div>
+            <div class="partner-card">
+                <img src="./Images/Clients/Viscadia.png" alt="Viscadia" class="partner-logo">
+                <div class="partner-name">Viscadia</div>
+                <div class="partner-description">Digital transformation</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <h2 class="section-title">Partnership Impact</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">35+</span>
+                <span class="stat-label">Trusted Partners</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Successful Projects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Industries Served</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">99%</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-title">Ready to Partner with Us?</h2>
+        <p class="cta-description">
+            Join our network of distinguished partners and let's create something extraordinary together. 
+            We're always looking for innovative organizations that share our commitment to excellence.
+        </p>
+        <!-- <a href="#" class="cta-button">
+            <i class="fas fa-handshake"></i> 
+            Start Partnership -->
+                <button class="cta-button">
+                <!-- Calendly link widget begin -->
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <i class="fas fa-handshake"></i> 
+                <a href="" style="color: black;"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/iamraoboy2000/30min?background_color=b8870b&text_color=000000'});return false;">Start Partnership</a>
+                <!-- Calendly link widget end -->
+                 </button>
+        <!-- </a> -->
+    </section>
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/iamraoboy2000/30min', text: 'Schedule time with me', color: '#b8870b', textColor: '#000000' }); }</script>
+<!-- Calendly badge widget end -->
+  <!-- ------ Footer -------- -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <div class="logo-container">
+          <div class="logo">
+            <img src="logo.jpg" alt="Logo" class="footer-logo">
+          </div>
+          <h2 class="company-name">Meenakshi Yadav and Associates</h2>
+        </div>
+        <p class="about-text">We are dedicated to providing exceptional services and creating innovative solutions for our customers. Join us on our journey to excellence.</p>
+        <div class="contact-info">
+          <div><i class="fas fa-map-marker-alt"></i> Lawyers Chamber No. 132, 9 C-Block, Gurgaon, Haryana, 122001</div>
+          <div><i class="fas fa-phone"></i> +91 9460161666,+91 9610779624,+91 7838595711 </div>
+          <div><i class="fas fa-envelope"></i>meenakshi1yadav@gmail.com, posh_updates@yashashish.com</div>
+        </div>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h2>Quick Links</h2>
+        <div class="links">
+          <ul>
+            <li><a href="./index.html" class="footer-link"><span class="link-icon"><i class="fas fa-home"></i></span>Home</a></li>
+            <li><a href="./about.html" class="footer-link"><span class="link-icon"><i class="fas fa-info-circle"></i></span>About</a></li>
+            <li><a href="./partners.html" class="footer-link"><span class="link-icon"><i class="fas fa-handshake"></i></span>Partners</a></li>
+            <li><a href="https://docs.google.com/forms/d/1pkR2zL8up-HBleYN2O1qZNmFhH0OqdLsktxEXyHkfEA/edit" class="footer-link"><span class="link-icon"><i class="fas fa-user-graduate"></i></span>Internships</a></li>
+            <!-- <li><a href="#" class="footer-link"><span class="link-icon"><i class="fas fa-briefcase"></i></span>Retainerships</a></li> -->
+            <li><a href="#" class="footer-link"><span class="link-icon"><i class="fas fa-envelope"></i></span>Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-section connect">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+          <a href="http://linkedin.com/company/meenakshi-yadav-associates/" class="social-icon linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/law_yafoundation/?hl=en" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/yashashishfoundation/" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.threads.com/@law_yafoundation" class="social-icon twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <!-- <div class="newsletter">
+          <h3>Subscribe to our Newsletter</h3>
+          <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="copyright">
+        &copy; 2025 Meenakshi Yadav and Associates. All rights reserved. &nbsp;|&nbsp;
+      </div>
+      <div class="copyright">
+        Developed by Mahim Yadav
+      </div>
+    </div>
+
+    <div class="footer-animation">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </footer>
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animation to partner cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.partner-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Counter animation for statistics
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + (element.textContent.includes('%') ? '%' : '+');
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + (element.textContent.includes('%') ? '%' : '+');
+                }
+            }, 16);
+        }
+
+        // Animate counters when they come into view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const number = entry.target.querySelector('.stat-number');
+                    const targetValue = parseInt(number.textContent);
+                    animateCounter(number, targetValue, 2000);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-item').forEach(item => {
+            statsObserver.observe(item);
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing mobile menu...');
+            
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+            
+            // Debug: Check if elements exist
+            console.log('Mobile Toggle:', mobileToggle);
+            console.log('Mobile Nav:', mobileNav);
+            console.log('Mobile Overlay:', mobileOverlay);
+            
+            if (!mobileToggle || !mobileNav) {
+                console.error('Required elements not found!');
+                return;
+            }
+            
+            // Toggle mobile menu
+            mobileToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Mobile toggle clicked');
+                
+                mobileToggle.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+                if (mobileOverlay) {
+                    mobileOverlay.classList.toggle('active');
+                }
+                
+                // Prevent body scroll when menu is open
+                if (mobileNav.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close mobile menu when clicking overlay
+            if (mobileOverlay) {
+                mobileOverlay.addEventListener('click', function() {
+                    console.log('Overlay clicked, closing menu');
+                    mobileToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    mobileOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileNav.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    console.log('Mobile link clicked, closing menu');
+                    mobileToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    if (mobileOverlay) {
+                        mobileOverlay.classList.remove('active');
+                    }
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Active page highlighting
+            const currentPage = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                
+                if (currentPage.includes('index.html') || currentPage === '/' || currentPage.endsWith('/')) {
+                    if (linkPath === './index.html' || linkPath === '/' || link.textContent.trim() === 'Home') {
+                        link.classList.add('active');
+                    }
+                } else if (currentPage.includes('about.html')) {
+                    if (linkPath === './about.html' || link.textContent.trim() === 'About Us') {
+                        link.classList.add('active');
+                    }
+                } else if (currentPage.includes('posh.html')) {
+                    if (linkPath === './posh.html' || link.textContent.trim() === 'POSH Services') {
+                        link.classList.add('active');
+                    }
+                } else if (currentPage.includes('practices.html')) {
+                    if (linkPath === './practices.html' || link.textContent.trim() === 'Practices') {
+                        link.classList.add('active');
+                    }
+                }
+                else if (currentPage.includes('partners.html')) {
+                    if (linkPath === './partners.html' || link.textContent.trim() === 'Partners') {
+                        link.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
